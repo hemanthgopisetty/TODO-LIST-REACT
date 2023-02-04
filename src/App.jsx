@@ -7,11 +7,11 @@ function App() {
   const handleForm = (e) => {
     e.preventDefault();
     
-    if(todo.length >1){
+    if(todo.length >1 && todo.length<15 ){
       setTodoList([...todoList, { todoName: todo }]);
     setTodo("");
     }
-    else alert("Enter the Todo pls");
+    else alert("Enter the Todo pls :)))");
   };
 
   const deleteTodo = (deleteValue) => {
@@ -31,7 +31,7 @@ function App() {
           <input
             className="border-2 placeholder:text-gray-500 rounded-lg border-black w-full p-5 mb-5 text-black"
             type="text"
-            placeholder="Add Todo"
+            placeholder="Enter the todo in 15 character's pls :)))"
             value={todo}
             onChange={(e) => setTodo(e.target.value)}
           />

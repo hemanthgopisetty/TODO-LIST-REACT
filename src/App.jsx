@@ -6,8 +6,12 @@ function App() {
 
   const handleForm = (e) => {
     e.preventDefault();
-    setTodoList([...todoList, { todoName: todo }]);
+    
+    if(todo.length >1){
+      setTodoList([...todoList, { todoName: todo }]);
     setTodo("");
+    }
+    else alert("Enter the Todo pls");
   };
 
   const deleteTodo = (deleteValue) => {
